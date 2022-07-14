@@ -56,11 +56,11 @@ public class FileIORunner {
 You can run this class, and you will see a new file named `simple.data` in the
 base directory from which you are running the class:
 
-![simple-data-file.png](simple-data-file.png)
+![simple-data-file.png](https://curriculum-content.s3.amazonaws.com/java-mod-3/simple-data-file.png)
 
 Opening this file will reveal the text that you wrote to file in your program:
 
-![simple-data-content.png](simple-data-content.png)
+![simple-data-content.png](https://curriculum-content.s3.amazonaws.com/java-mod-3/simple-data-content.png)
 
 Now, let's keep this new file where it was saved by our program and modify our
 runner class so that it no longer writes to the file, but instead reads from it
