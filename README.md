@@ -143,9 +143,9 @@ Before we show the output of this code, let us break down a few things.
 As we said before, the `FileWriter` constructors could throw an `IOException`
 for a few reasons:
 
-  - The file provided is actually a directory instead of a regular file.
-  - The file does not exist and cannot be created.
-  - The file cannot be opened for some other reason.
+- The file provided is actually a directory instead of a regular file.
+- The file does not exist and cannot be created.
+- The file cannot be opened for some other reason.
 
 With this being said, we wrapped it in a try-catch. But this try-catch looks a
 little different. This is because we used a **try-with-resources** statement
