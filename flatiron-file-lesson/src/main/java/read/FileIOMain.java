@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class FileIOMain {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         String content = "";
         File file = new File("simple.txt");
         try (Scanner reader = new Scanner(file)) {
