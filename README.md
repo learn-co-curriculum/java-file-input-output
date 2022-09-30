@@ -343,9 +343,55 @@ Ann
 
 ```
 
+### File IO Solutions
+
+It is important to know that there are **many** ways to read and write to a file
+in Java. Some of these ways may not make sense to us yet, as we have yet to
+cover a topic called "streams". Other ways would use the `java.nio` package
+instead of the `java.io` package. We won't go into the differences between the
+two packages here, but consider this alternative to reading from a file using
+the `Path`, `Paths`, and `Files` class in the `java.nio` package:
+
+```java
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
+public class FileIOMain {
+
+    public static void main(String[] args) {
+        Path path = Paths.get("simple.txt");
+        try {
+            String content = Files.readString(path);
+
+            System.out.println(content);
+
+        } catch (IOException ioException) {
+            ioException.printStackTrace();
+        }
+    }
+}
+```
+
+The first line in the `main()` method specifies the file path in a similar way
+to the `File file = new File(String pathname)`. We then feed the static
+method `readString()` the `Path` object. The `readString()` method will then
+read all the content from the file into a `String` and then close the file once
+all the content has been read. Believe it or not, this solution of reading from
+a file will give us the same output as our solution before when we used the
+`Scanner` object!
+
+For more information on these `java.nio` classes, please see the documentation
+below. When it comes to the labs following this lesson, feel free to use any
+solution that best fits the problem as long as it meets the requirements.
+
 ## References
 
 - [Java 11 File](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/File.html)
 - [Java 11 FileWriter](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/FileWriter.html)
 - [Java try-with-resources](https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html#:~:text=The%20try%20%2Dwith%2Dresources%20statement%20is%20a%20try%20statement%20that,the%20end%20of%20the%20statement.)
 - [Java 11 Scanner](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Scanner.html)
+- [Java 11 Files](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/nio/file/Files.html)
+- [Java 11 Path](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/nio/file/Path.html)
+- [Java 11 Paths](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/nio/file/Paths.html)
