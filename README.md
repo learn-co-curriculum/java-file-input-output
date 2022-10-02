@@ -299,7 +299,7 @@ go through the file line-by-line and parse and read through the content. In this
 case, we are just going to read the file and print it out to the console.
 
 Now, as we have seen when using the `Scanner` object, it could throw an
-exception. In the past, we have seen it throw a `InputMisMatchException` if the
+exception. In the past, we have seen it throw an `InputMisMatchException` if the
 user entered a String, and we were expecting an integer. In this case, we could
 end up with an `IOException` again if the file doesn't exist, or we cannot read
 the file for some reason. It is best to wrap this in a try-catch and use the
