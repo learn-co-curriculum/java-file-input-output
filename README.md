@@ -53,7 +53,7 @@ directory we are in. For example, if we are sitting in the
 `/home/flatironschool` directory, then the relative path for us to get to the
 "homework" file is:
 
-```plaintext
+```text
 ./Documents/homework.txt
 ```
 
@@ -210,7 +210,7 @@ file name) and a `boolean` to tell it whether to write to the end of the file.
 
 If we were to run this, then our `simple.txt` file would have this content:
 
-```plaintext
+```text
 example of writing to a file. Hello World!
 ```
 
@@ -252,7 +252,7 @@ else.
 
 Now if we run this, the content of the `simple.txt` file will look like this:
 
-```plaintext
+```text
 Leslie
 Ron
 Ann
@@ -336,7 +336,7 @@ can print out and read the content as it is formatted in our `simple.txt` file.
 Finally, let's run this program and see if it read the `simple.txt` file
 correctly! The output for this program is:
 
-```plaintext
+```text
 Leslie
 Ron
 Ann
