@@ -11,7 +11,7 @@ So far, when we get input from a user, we are prompting them through the command
 line to enter in information. We then provide them an output through the command
 line interface as well. This works great - but what if the user wants to run
 the program over and over again with the same input? They would have to re-enter
-it every time they run the program and go through all of the prompts again and
+it every time they run the program and go through all the prompts again and
 again. Similarly, what if the user wants to save the output to look back on?
 They would have to either take a screenshot of the output or copy and paste the
 output from the command line into a file.
@@ -39,7 +39,7 @@ documents stored in a "Documents" folder. Maybe we are interested in finding a
 file called "homework" in the "Documents" folder. In order to get to one of those
 documents, we need to specify its path. This could look like this:
 
-```plaintext
+```text
 /home/flatironschool/Documents/homework.txt
 ```
 
@@ -87,9 +87,11 @@ for more information on the `File` class and its methods.
 
 ### Writing to a File
 
-In order to write to a file, Java has provided a `FileWriter` class. There are
-a few ways to construct the `FileWriter` instance. Consider the first two
-constructors:
+There are several ways to write to a file and read a file in Java! We'll cover
+some of the ways we can read and write to a file in this section.
+
+Let's start by introducing the `FileWriter` class. There are a few ways to
+construct the `FileWriter` instance. Consider the first two constructors:
 
 ```java
 import java.io.File;
@@ -114,11 +116,9 @@ with the file name or we can pass in the actual `File` object itself. There is
 one issue with our code above and that is that the `FileWriter` constructors
 throw an `IOException`. This type of exception signals that an input/output
 (I/O) error has occurred. We'll modify the above code to wrap it in a try-catch
-to gracefully handle the exception momentarily.
-
-Now that we have our `FileWriter` instance instantiated, let's actually write to
-the file. The `FileWriter` class is a subclass of a couple of different classes,
-and one of the methods it inherits is called `write()`:
+to gracefully handle the exception. We'll also use the `FileWriter` instance
+to actually write to the file too! The `FileWriter` class inherits a method
+called `write` which will allow us to write to a file:
 
 ```java
 import java.io.File;
